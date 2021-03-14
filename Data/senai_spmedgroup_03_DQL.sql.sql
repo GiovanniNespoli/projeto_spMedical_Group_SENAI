@@ -2,7 +2,7 @@ USE Medical_Grup_;
 
 --Consulta--
 SELECT Consulta.IdConsulta , Clinica.Endereco AS Endereço , Clinica.RazaoSocial AS Clínica ,
-Medico.NomeMedico , Especialidade.Especialidades , Situacao.TipoSituacao AS Situação ,
+Medico.NomeMedico , Especialidade.Especialidades , Paciente.NomePaciente , Paciente.RG , Situacao.TipoSituacao AS Situação ,
 Consulta.DataConsulta , Consulta.Descricao AS Descrição , Consulta.Exames FROM Consulta
 
 INNER JOIN Medico
@@ -12,7 +12,9 @@ ON Medico.IdEspecialidade = Especialidade.IdEspecialidade
 INNER JOIN Clinica
 ON Medico.IdClinica = Clinica.IdClinica
 INNER JOIN Situacao
-ON Consulta.IdSituacao = Situacao.IdSituacao;
+ON Consulta.IdSituacao = Situacao.IdSituacao
+INNER JOIN Paciente
+ON Paciente.IdPaciente = Consulta.IdConsulta;
 
 --Usuarios--
 SELECT Usuario.IdUsuario , TipoDeUsuario.IdTipoDeUsuario ,
