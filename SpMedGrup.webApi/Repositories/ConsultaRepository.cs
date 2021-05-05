@@ -17,11 +17,6 @@ namespace SpMedGrup.webApi.Repositories
         {
             Consultum ConBuscada = ctx.Consulta.Find(id);
 
-            if (NovaConsulta.Exames != null)
-            {
-                ConBuscada.Exames = NovaConsulta.Exames;
-            }
-
             if (NovaConsulta.Descricao != null)
             {
                 ConBuscada.Descricao = NovaConsulta.Descricao;
@@ -57,47 +52,36 @@ namespace SpMedGrup.webApi.Repositories
         public List<Consultum> ListarTudo()
         {
             return ctx.Consulta
-                .Include(e => e.IdPacienteNavigation.NomePaciente)
-                .Include(e => e.IdPacienteNavigation.Telefone)
-                .Include(e => e.IdMedicoNavigation.NomeMedico)
-                .Include(e => e.IdMedicoNavigation.IdEspecialidadeNavigation.Especialidades)
-                .Include(e => e.IdSituacaoNavigation.TipoSituacao)
-                .Include(e => e.IdMedicoNavigation.IdClinicaNavigation.IdClinica)
-                .Include(e => e.IdMedicoNavigation.IdClinicaNavigation.Endereco)
+                .Include(e => e.IdPacienteNavigation)
+                .Include(e => e.IdMedicoNavigation)
+                .Include(e => e.IdSituacaoNavigation)
                 .ToList();
         }
 
         public List<Consultum> MedicoCon(int id)
         {
+            Medico MedBuscado = ctx.Medicos.FirstOrDefault(e => e.IdUsuario == id);
+
             return ctx.Consulta
-               .Include(e => e.IdPacienteNavigation.NomePaciente)
-               .Include(e => e.IdPacienteNavigation.Telefone)
-               .Include(e => e.IdPacienteNavigation.Consulta)
-               .Include(e => e.IdPacienteNavigation.DataDeNasc)
-               .Include(e => e.IdSituacaoNavigation.TipoSituacao)
-               .Where(e => e.IdMedico == id)
+               .Include(e => e.IdPacienteNavigation)
+               .Where(e => e.IdMedico == MedBuscado.IdMedico)
                .ToList();
         }
 
         public List<Consultum> MinhasCon(int id)
         {
+            Paciente PacBuscado = ctx.Pacientes.FirstOrDefault(e => e.IdUsuario == id);
+
             return ctx.Consulta
-                .Include(e => e.IdPacienteNavigation.NomePaciente)
-                .Include(e => e.IdPacienteNavigation.Telefone)
-                .Include(e => e.IdMedicoNavigation.NomeMedico)
-                .Include(e => e.IdMedicoNavigation.IdEspecialidadeNavigation.Especialidades)
-                .Include(e => e.IdSituacaoNavigation.TipoSituacao)
-                .Include(e => e.IdMedicoNavigation.IdClinicaNavigation.Endereco)
-                .Where(e => e.IdPaciente == id)
+                .Include(e => e.IdMedicoNavigation)
+                .Include(e => e.IdMedicoNavigation.IdClinicaNavigation)
+                .Where(e => e.IdPaciente == PacBuscado.IdPaciente)
                 .ToList();
         }
 
         public void Status(int id, string status)
         {
             Consultum consulta = ctx.Consulta
-                .Include(e => e.IdMedicoNavigation)
-                .Include(e => e.IdPacienteNavigation)
-                .Include(e => e.IdSituacaoNavigation)
                 .FirstOrDefault(e => e.IdConsulta == id);
 
             switch (status)
@@ -118,6 +102,9 @@ namespace SpMedGrup.webApi.Repositories
                     consulta.IdSituacao = consulta.IdSituacao;
                     break;
             }
+
+            ctx.Consulta.Update(consulta);
+            ctx.SaveChanges();
         }
     }
 }

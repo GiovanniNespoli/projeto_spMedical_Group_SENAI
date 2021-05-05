@@ -144,7 +144,7 @@ namespace SpMedGrup.webApi.Controllers
         }
 
         [Authorize(Roles = "3")]
-        [HttpPatch("{id")]
+        [HttpPatch("{id}")]
         public IActionResult Patch(int id, Consultum status)
         {
             try
