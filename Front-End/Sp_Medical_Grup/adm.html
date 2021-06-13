@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/css/adm.css">
+    <title>ADM</title>
+</head>
+<body>
+    
+    <header class="cab">
+        <div class="ctn">
+            <div class="logo">
+                <img class="img" src="./asset/img/logo.png" alt="logo">
+            </div>
+
+            <div class="header">
+                <a href="#">login</a>
+                <a href="#"><img src="./asset/img/pagina-inicial.png" alt="home"></a>
+                <a href="#">logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="ctn">
+            <div class="txtmain">
+                
+                <p>acesso do</p>
+                <p>administrador</p>
+              
+            </div>
+
+            <div class="meio">
+                <div class="linha"></div>
+            </div>
+
+            <div class="userImg">
+                <img src="./asset/img/userr.png" alt="foto">
+            </div>
+        </section>
+
+        <section id="botao">
+            <button onclick="cadastrarCon()">cadastrar consultas</button>
+            <button onclick="listaConsulta()">lista de consultas</button>
+            <button onclick="">cadastrar usuário</button>
+
+            <script>
+
+                var toggle1 = false
+                var toggle2 = false
+                var toggle3 = false
+
+                function listaConsulta()
+                {
+                    toggle1 = !toggle1
+
+                    if(toggle1 === true)
+                    {
+                        document.getElementById("lista").style.display = "flex"
+                        document.getElementById("cadastrar").style.display = "none"
+                        var btn = document.getElementsByTagName("button")[1].innerHTML = "fechar a lista"
+                        
+                        toggle2 = false
+                        toggle3 = false
+                    }else
+                    {
+                        document.getElementById("lista").style.display = "none"
+                        var btn = document.getElementsByTagName("button")[1].innerHTML = "lista de consultas"
+                    }
+                    
+                }
+
+                function cadastrarCon()
+                {
+                     toggle2 = !toggle2
+
+                    if(toggle2 === true)
+                    {
+                        document.getElementById("cadastrar").style.display = "flex"
+                        document.getElementById("lista").style.display = "none"
+                        var btn = document.getElementsByTagName("button")[0].innerHTML = "fechar cadastro"
+
+                       toggle1 = false
+                       toggle3 = false
+                    }else
+                    {
+                        document.getElementById("cadastrar").style.display = "none"
+                        var btn = document.getElementsByTagName("button")[0].innerHTML = "cadastrar usuário"
+                    }
+                }
+
+            </script>
+        </section>
+        <section id="lista">
+            <div class="listaBranca">
+                <div class="meioLista1">
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id consulta</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id paciente</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id médico</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" readonly/>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="meioLista2">
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>descrição</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" readonly/>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="meioLista3">
+                    
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id situação</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>data da consulta</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" readonly/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>exames</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"  readonly/>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="cadastrar">
+            <div class="listaBranca">
+                <div class="meioLista1">
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id consulta</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id paciente</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id médico</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"/>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="meioLista2">
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>descrição</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <button>cadastrar</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="meioLista3">
+                    
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>id situação</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>data da consulta</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text"/>
+                        </div>
+                    </div>
+
+                    <div class="infs">
+                        <div class="infsP">
+                            <p>exames</p>
+                        </div>
+
+                        <div class="inputInfs">
+                            <input type="text" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+        
+</body>
+</html>

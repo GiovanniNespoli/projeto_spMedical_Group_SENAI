@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #006B49;
+    --verdin: #01A86E;
+    --verdinzin: #44E1AF;
+    --background: linear-gradient(90deg, #006B49 14.32%, #01A86E 30.65%);
+    --font-family: 'Bebas Neue';
+    --white: #fff;
+    --gradiente: linear-gradient(180deg, #44E1AF 0%, #01A86E 35.1%, #006B49 78.81%);
+}
+
+.cab-ADM{
+    background: var(--background);
+    width: 100%;
+    height: 138px;
+}
+.ctn-ADM{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.logo-ADM{
+    height: 100%;
+    width: 20%;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-ADM{
+    width: 163px;
+    height: 93px;
+}
+.header-ADM{
+    height: 100%;
+    width: 60%;
+    /* background-color: greenyellow; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.header-ADM a{
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-ADM a:hover{
+
+    transform: scale(1.1);
+}
+
+.header-ADM button{
+    color: var(--white);
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-size: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-ADM button:hover{
+
+    transform: scale(1.1);
+}
+.main-ADM{
+    height: 600px;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.txtmain-ADM{
+    width: 50%;
+    height: 100%;
+    /* background-color: violet; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.txtmain-ADM{
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 100px;
+}
+.meio-ADM{
+    width: 10%;
+    height: 100%;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linha-ADM{
+    width: 1px;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255)
+}
+
+.userImg-ADM{
+    width: 40%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#botao-ADM{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#botao-ADM button{
+    padding: 20px 60px;
+    font-family: var(--font-family);
+    background-color: var(--verdin);
+    color: var(--white);
+    font-size: 45px;
+
+    transition: 0.7s;
+    border-radius: 10px;
+}
+
+#botao-ADM button:hover{
+    background-color: var(--verdinzin);
+}

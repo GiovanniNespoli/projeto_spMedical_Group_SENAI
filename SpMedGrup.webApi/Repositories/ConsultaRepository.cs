@@ -44,6 +44,7 @@ namespace SpMedGrup.webApi.Repositories
             ctx.SaveChanges();
         }
 
+
         public List<Consultum> ListarCon()
         {
             return ctx.Consulta.ToList();
@@ -64,6 +65,7 @@ namespace SpMedGrup.webApi.Repositories
 
             return ctx.Consulta
                .Include(e => e.IdPacienteNavigation)
+               .Include(e => e.IdSituacaoNavigation)
                .Where(e => e.IdMedico == MedBuscado.IdMedico)
                .ToList();
         }
@@ -75,6 +77,8 @@ namespace SpMedGrup.webApi.Repositories
             return ctx.Consulta
                 .Include(e => e.IdMedicoNavigation)
                 .Include(e => e.IdMedicoNavigation.IdClinicaNavigation)
+                .Include(e => e.IdMedicoNavigation.IdEspecialidadeNavigation)
+                .Include(e => e.IdSituacaoNavigation)
                 .Where(e => e.IdPaciente == PacBuscado.IdPaciente)
                 .ToList();
         }

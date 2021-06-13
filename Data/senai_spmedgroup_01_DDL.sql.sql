@@ -1,6 +1,8 @@
 CREATE DATABASE Medical_Grup_;
+GO
 
 USE Medical_Grup_;
+GO
 
 CREATE TABLE TipoDeUsuario(
 

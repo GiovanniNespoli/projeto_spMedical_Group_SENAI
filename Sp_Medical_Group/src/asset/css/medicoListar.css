@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #006B49;
+    --verdin: #01A86E;
+    --verdinzin: #44E1AF;
+    --background: linear-gradient(90deg, #006B49 14.32%, #01A86E 30.65%);
+    --font-family: 'Bebas Neue';
+    --white: #fff;
+    --gradiente: linear-gradient(180deg, #44E1AF 0%, #01A86E 35.1%, #006B49 78.81%);
+}
+
+.cab-ML{
+    background: var(--background);
+    width: 100%;
+    height: 138px;
+}
+.ctn-ML{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.logo-ML{
+    height: 100%;
+    width: 20%;
+    /* background-color: green; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-ML{
+    width: 163px;
+    height: 93px;
+}
+.header-ML{
+    height: 100%;
+    width: 60%;
+    /* background-color: greenyellow; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.header-ML a{
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-ML a:hover{
+    transform: scale(1.1);
+}
+
+.header-ML button{
+    background-color: transparent;
+    color: var(--white);
+    font-family: var(--font-family);
+    font-size: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-ML button:hover{
+    transform: scale(1.1);
+}
+
+.main-ML{
+    width: 100%;
+    height: auto;
+    background-color: var(--background-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lista-ML{
+    width: 80%;
+    height: 70vh;
+    background-color: white;
+    margin: 100px;
+
+    border-radius: 20px;
+    border: black 3px solid;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.lista-meio-ML{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;  
+}
+
+.lista-input-ML{
+    width: 80%;
+    height: 33%;
+    /* background-color: gray; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.meio-input-ML{
+    width: 25%;
+    height: 100%;
+    /* background-color: greenyellow; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-family);
+    font-size: 30px;
+}
+
+.input-meio-ML{
+    width: 50%;
+    height: 100%;
+    /* background-color: khaki; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-meio-ML input{
+    width: 100%;
+    height: 30%;
+    background-color: var(--verdin);
+
+    border-radius: 10px;
+    border: 2px solid black;
+
+    font-family: var(--font-family);
+    font-size: 20px;
+    padding-left: 10px;
+    color: white;
+}
+
+.btn-meio-ML{
+    width: 25%;
+    height: 60%;
+    /* background-color: rgb(0, 255, 157); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.btn-meio-ML button{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-family: var(--font-family);
+    color: white;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    transition: 0.7s;
+}
+
+.btn-meio-ML button:hover{
+    color: black;
+    background-color: white;
+}

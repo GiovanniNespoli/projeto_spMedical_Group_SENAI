@@ -40,3 +40,19 @@ INNER JOIN Especialidade
 ON Medico.IdEspecialidade = Especialidade.IdEspecialidade
 INNER JOIN Clinica
 ON Medico.IdClinica = Clinica.IdClinica;
+
+
+SELECT Medico.NomeMedico, Especialidade.Especialidades, Clinica.Endereco,
+Clinica.RazaoSocial, Consulta.DataConsulta, Situacao.TipoSituacao, Consulta.Descricao,
+Consulta.Exames FROM Consulta
+
+INNER JOIN Medico
+ON Medico.IdMedico = Consulta.IdConsulta
+INNER JOIN Especialidade
+ON Medico.IdEspecialidade = Especialidade.IdEspecialidade
+INNER JOIN Clinica
+ON Clinica.IdClinica = Consulta.IdConsulta
+INNER JOIN Situacao
+ON Situacao.IdSituacao = Consulta.IdConsulta;
+
+SELECT * FROM Consulta

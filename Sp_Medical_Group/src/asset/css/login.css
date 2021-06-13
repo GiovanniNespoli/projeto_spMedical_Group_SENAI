@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #006B49;
+    --verdin: #01A86E;
+    --verdinzin: #44E1AF;
+    --background: linear-gradient(90deg, #006B49 14.32%, #01A86E 30.65%);
+    --font-family: 'Bebas Neue';
+    --white: #fff;
+    --gradient: linear-gradient(180deg, #44E1AF 0%, #01A86E 35.1%, #006B49 78.81%);
+}
+
+.main-log{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    /* background-color: blue; */
+}
+
+.imgLogin-log{
+    height: 100%;
+    width: 50%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.login-log{
+    height: 100%;
+    width: 50%;
+    background: var(--gradient);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.header-log{
+    height: 18%;
+    width: 100%;
+    /* background-color: cadetblue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 50px;
+}
+
+.header-log h1{
+    font-family: var(--font-family);
+}
+
+.img-log img{
+    height: 100%;
+    width: 100%;
+}
+
+.logo-log{
+    width: 100%;
+    height: 25%;
+    /* background-color: yellow; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputsLogo-log{
+    height: 50%;
+    width: 100%;
+    /* background-color: yellowgreen; */
+
+}
+
+.inputsLogo-log form{
+    /* background-color: red; */
+    width: auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-log img{
+    width: 50%;
+}
+
+.inputNome-log{
+    width: 50%;
+    border-bottom: 2px rgb(255, 255, 255) solid;
+    background-color: transparent;
+    height: 15%;
+
+    color: white;
+    font-family: var(--font-family);
+    font-size: 30px;
+    display: flex;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    font-family: var(--font-family);
+    font-size: 30px;
+ }
+
+ .inputsLogo-log .btn-log{
+     width: 20%;
+     height: 15%;
+     background-color: var(--verdinzin);
+
+     color: white;
+     font-family: var(--font-family);
+     font-size: 30px;
+    border-radius: 10px;
+    transition: 0.7s;
+
+ }
+
+ .btn-log:hover{
+     transform: scale(1.1);
+ }
+
+ .error-log{
+     color: red;
+     font-family: var(--font-family);
+     font-size: 20px;
+ }

@@ -128,7 +128,7 @@ namespace SpMedGrup.webApi.Controllers
             }
         }
 
-        [Authorize(Roles ="3")]
+        [Authorize(Roles ="1")]
         [HttpPut("{id}")]
         public IActionResult AtualizarDados(int id, Consultum NovaCon)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using SpMedGrup.webApi.Domains;
@@ -41,7 +42,9 @@ namespace SpMedGrup.webApi.Controllers
                 {
                     new Claim(JwtRegisteredClaimNames.Email, Login.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, Login.IdUsuario.ToString()),
-                    new Claim(ClaimTypes.Role, Login.IdTipoDeUsuario.ToString())
+                    new Claim(ClaimTypes.Role, Login.IdTipoDeUsuario.ToString()),
+                    new Claim("role", Login.IdTipoDeUsuario.ToString()),
+                    new Claim("nameUser", Login.Email)
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("Medical-chave-autenticacao"));
