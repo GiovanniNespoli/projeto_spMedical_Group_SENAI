@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gigio\\Desktop\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj": {}
+    "C:\\Users\\Gigio\\Desktop\\SENAI\\2DT\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gigio\\Desktop\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj": {
+    "C:\\Users\\Gigio\\Desktop\\SENAI\\2DT\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gigio\\Desktop\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj",
+        "projectUniqueName": "C:\\Users\\Gigio\\Desktop\\SENAI\\2DT\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj",
         "projectName": "SpMedGrup.webApi",
-        "projectPath": "C:\\Users\\Gigio\\Desktop\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj",
+        "projectPath": "C:\\Users\\Gigio\\Desktop\\SENAI\\2DT\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\SpMedGrup.webApi.csproj",
         "packagesPath": "C:\\Users\\Gigio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gigio\\Desktop\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\obj\\",
+        "outputPath": "C:\\Users\\Gigio\\Desktop\\SENAI\\2DT\\SP_MEDICAL_GROUP\\SpMedGrup.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gigio\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -23,7 +23,6 @@ namespace SpMedGrup.webApi.Controllers
             Tipo = new TipoDeUsuarioRepository();
         }
         
-        [Authorize(Roles = "3")]
         [HttpGet]
         public IActionResult Listar()
         {
@@ -37,7 +36,6 @@ namespace SpMedGrup.webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "3")]
         [HttpGet("Lista")]
         public IActionResult ListarUser()
         {
@@ -51,7 +49,6 @@ namespace SpMedGrup.webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "3")]
         [HttpPost]
         public IActionResult Cadastrar(TipoDeUsuario NovoTipo)
         {
@@ -66,7 +63,6 @@ namespace SpMedGrup.webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "3")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
@@ -81,7 +77,6 @@ namespace SpMedGrup.webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "3")]
         [HttpPut("{id}")]
         public IActionResult Atualizar(int id, TipoDeUsuario NovoTipo)
         {

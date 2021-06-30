@@ -36,11 +36,11 @@ class ListaMedico extends Component
         await this.setState({ Desc : event.target.value })
     };
 
-    buscarDescId = async (lista) =>
+    buscarDescId = async (med) =>
     {
         await this.setState({
-            idDesc : lista.idConsulta,
-            Desc : lista.descricao
+            idDesc : med.idConsulta,
+            Desc : med.descricao
             
         })
         console.log(this.state.idDesc, this.state.Desc)
@@ -48,7 +48,7 @@ class ListaMedico extends Component
 
     atualizarDesc = (event) =>
     {
-        event.preventDefault();
+        event.preventDefault()
 
         fetch('http://localhost:5000/api/Consulta/'+this.state.idDesc,
         {
@@ -67,7 +67,7 @@ class ListaMedico extends Component
             }
         })
 
-        .then(this.listarMedicoConsulta)
+        .then(this.listarMedicoConsulta())        
     }
 
     componentDidMount = () => 
@@ -146,7 +146,7 @@ class ListaMedico extends Component
                         <p>situação</p>
                     </div>
                     <div className="input-meio-ML">
-                        <input type="text" placeholder={med.idSituacaoNavigation.tipoSituacao} />
+                        <input type="text" placeholder={med.idSituacaoNavigation.tipoSituacao} readOnly/>
                     </div>
                 </div>
                 <div className="lista-input-ML">
@@ -154,10 +154,10 @@ class ListaMedico extends Component
                         <p>descrição</p>
                     </div>
                     <div className="input-meio-ML">
-                        <input value={this.state.Desc} type="text" placeholder={med.descricao}/>
+                        <input onChange={this.atualizarState} value={this.state.Desc} type="text" placeholder={med.descricao}/>
                     </div>
                     <div className="btn-meio-ML">
-                        <button onClick={this.buscarDescId}>atualizar</button>
+                        <button onClick={() => this.buscarDescId(med)}>atualizar</button>
                         <button type="submit">confirmar</button>
                     </div>
                 </div>
